@@ -12,7 +12,7 @@ You can install `Windows Terminal` from Microsoft store
 
 To install Git on Windows:
 
-1. Go to the official Git website: https://git-scm.com/download/windows
+1. Go to the official Git website: https://git-scm.com/install/windows
 2. The download should start automatically. If not, click on the download link.
 3. Run the downloaded installer.
 4. During installation:
@@ -44,31 +44,36 @@ Replace "Your Name" and "your.email@example.com" with your actual name and email
 You can install GitHub CLI in two ways:
 
 #### Option 1: Manual Download
+
 1. Go to https://cli.github.com/
 2. Click on the download button for Windows
 3. Run the installer
 4. Follow the installation prompts
 
 #### Option 2: Using winget
+
 ```sh
 winget install --id GitHub.cli
 ```
 
 2. Verify the installation:
+
 ```sh
 gh --version
 ```
 
 3. Authenticate with GitHub:
+
 ```sh
 gh auth login
 ```
+
 Follow the interactive prompts:
+
 - Select "GitHub.com"
 - Select "HTTPS"
 - Select "Yes" to authenticate with your GitHub credentials
 - Choose your preferred way to authenticate (browser or toke)
-
 
 ## 3. Install Visual Studio Code (VS Code)
 
