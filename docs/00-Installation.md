@@ -4,6 +4,34 @@
 
 Before starting, ensure you have administrative privileges on your computer to install the necessary software.
 
+## Package Manager Recommendation
+
+To simplify installing and managing tools on your system, we recommend using a package manager:
+
+### Windows: Winget
+
+**Winget (Windows Package Manager)** makes it easy to install and update software via the command line.
+
+- **Website:** [https://learn.microsoft.com/en-us/windows/package-manager/](https://learn.microsoft.com/en-us/windows/package-manager/)
+- **Install Guide:** [Install the Windows Package Manager](https://learn.microsoft.com/en-us/windows/package-manager/winget/#install-winget)
+- **Check if installed:**
+
+  ```powershell
+  winget --version
+  ```
+
+### MaxOS: Homebrew
+
+Homebrew is a popular package manager for macOS that simplifies the installation of software.
+
+- Website: [https://brew.sh/](https://brew.sh/)
+- Install Guide: [Homebrew Installation](https://brew.sh/)
+- Check if installed:
+
+  ```sh
+  brew --version
+  ```
+
 ## 1. Install Windows terminal
 
 You can install `Windows Terminal` from Microsoft store
@@ -12,7 +40,15 @@ You can install `Windows Terminal` from Microsoft store
 
 To install Git on Windows:
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1. Go to the official Git website: https://git-scm.com/install/windows
+=======
+1. Go to the official Git website: <https://git-scm.com/download/windows>
+>>>>>>> Stashed changes
+=======
+1. Go to the official Git website: <https://git-scm.com/download/windows>
+>>>>>>> Stashed changes
 2. The download should start automatically. If not, click on the download link.
 3. Run the downloaded installer.
 4. During installation:
@@ -37,7 +73,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
-Replace "Your Name" and "your.email@example.com" with your actual name and email address.
+Replace "Your Name" and "<your.email@example.com>" with your actual name and email address.
 
 ### Install GitHub CLI
 
@@ -45,24 +81,64 @@ You can install GitHub CLI in two ways:
 
 #### Option 1: Manual Download
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 1. Go to https://cli.github.com/
+=======
+1. Go to <https://cli.github.com/>
+>>>>>>> Stashed changes
+=======
+1. Go to <https://cli.github.com/>
+>>>>>>> Stashed changes
 2. Click on the download button for Windows
 3. Run the installer
 4. Follow the installation prompts
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #### Option 2: Using winget
+=======
+#### Option 2: Using winget (Windows)
+>>>>>>> Stashed changes
+=======
+#### Option 2: Using winget (Windows)
+>>>>>>> Stashed changes
 
 ```sh
 winget install --id GitHub.cli
 ```
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 2. Verify the installation:
+=======
+=======
+>>>>>>> Stashed changes
+#### option 3: Using Homebrew (macOS)
+
+```sh
+brew install gh
+```
+
+### Verify the installation
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 ```sh
 gh --version
 ```
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 3. Authenticate with GitHub:
+=======
+### Authenticate with GitHub
+>>>>>>> Stashed changes
+=======
+### Authenticate with GitHub
+>>>>>>> Stashed changes
 
 ```sh
 gh auth login
@@ -79,7 +155,7 @@ Follow the interactive prompts:
 
 You can install VS Code on Windows by following these steps:
 
-1. Go to the official Visual Studio Code website: https://code.visualstudio.com/
+1. Go to the official Visual Studio Code website: <https://code.visualstudio.com/>
 2. Click on the "Download for Windows" button.
 3. Run the downloaded installer and follow the setup instructions.
 
@@ -87,7 +163,12 @@ Alternatively, you can use the Windows Package Manager (winget) from the command
 
 ```sh
 winget install --id Microsoft.VisualStudioCode
+```
 
+or Homebrew on MacOS:
+
+```sh
+brew install --cask visual-studio-code
 ```
 
 ## 3. Installing Node.js and Yarn
@@ -96,11 +177,22 @@ winget install --id Microsoft.VisualStudioCode
 
 Do not install Node.js if you installed NVM
 
-1. Go to the official NVM repository: [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows).
-2. Download the LTS (Long Term Support) version for your operating system.
-3. Run the installer and follow the on-screen instructions.
-4. Run `nvm install 23.1.0`
-5. Run `nvm use 23.1.0`
+1. Go to the official NVM repository: [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows), and Run the installer and follow the on-screen instructions.
+
+   1.1 For Windows, you can use winget:
+
+```sh
+winget install --id CoreyButler.NVMforWindows
+```
+
+1.2 For MacOS, you can use Homebrew:
+
+```sh
+brew install nvm
+```
+
+3. Run `nvm install 23.1.0`
+4. Run `nvm use 23.1.0`
 
 ### Install Node.js
 
@@ -124,7 +216,7 @@ This should display the installed Node.js version.
 
 1. Open your terminal or command prompt.
 2. Run `corepack enable`
-   - if corepack not installed run `npm install -g corepack` and re-run ` corepack enable`
+   - if corepack not installed run `npm install -g corepack` and re-run `corepack enable`
 
 #### using npm
 
