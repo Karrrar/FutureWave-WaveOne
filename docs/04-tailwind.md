@@ -62,7 +62,7 @@ If you prefer to use Tailwind CSS via a CDN, you can easily add it to your HTML 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind CSS Example</title>
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-gray-100 text-gray-900">
     <header class="bg-white shadow">
@@ -128,6 +128,18 @@ Tailwind makes it easy to create responsive designs using its responsive utility
 </div>
 ```
 
+example
+
+```html
+<div class="bg-blue-500 p-4 text-white 
+            sm:bg-green-500 
+            md:bg-yellow-500 
+            lg:bg-red-500 
+            xl:bg-purple-500">
+  Responsive box
+</div>
+```
+
 ## Example: Building a Simple Page with Tailwind CSS
 
 Here's a simple example of an HTML page styled with Tailwind CSS:
@@ -135,176 +147,123 @@ Here's a simple example of an HTML page styled with Tailwind CSS:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic HTML Tags with Tailwind CSS</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-  </head>
-    <header
-      class="bg-gradient-to-r from-purple-500 to-blue-500 text-white p-6 text-center shadow-lg"
-    >
-      <h1 class="text-4xl font-bold">Welcome to the Basic HTML Tags Page</h1>
-      <nav>
-        <ul class="list-none p-0 mt-4">
-          <li class="inline mr-6">
-            <a href="#section1" class="text-white no-underline hover:underline"
-              >Section 1</a
-            >
-          </li>
-          <li class="inline mr-6">
-            <a href="#section2" class="text-white no-underline hover:underline"
-              >Section 2</a
-            >
-          </li>
-          <li class="inline mr-6">
-            <a href="#section3" class="text-white no-underline hover:underline"
-              >Section 3</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <main class="p-8 max-w-4xl mx-auto">
-      <section id="section1" class="mb-12">
-        <h2 class="text-3xl font-semibold mb-6">Section 1: Text Elements</h2>
-        <p class="mb-6">
-          This is a paragraph with some
-          <strong class="font-bold text-blue-500">bold</strong> text and some
-          <em class="italic text-purple-500">italic</em> text.
-        </p>
-        <blockquote
-          class="border-l-4 border-blue-300 pl-4 mb-6 italic text-gray-600"
-        >
-          This is a blockquote.
-        </blockquote>
-        <pre class="bg-gray-800 text-white p-4 overflow-auto mb-6 rounded-lg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic HTML Tags with Tailwind CSS</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<header class="bg-gradient-to-r from-purple-500 to-blue-500 text-white p-6 text-center shadow-lg">
+  <h1 class="text-4xl font-bold">Welcome to the Basic HTML Tags Page</h1>
+  <nav>
+    <ul class="list-none p-0 mt-4">
+      <li class="inline mr-6">
+        <a href="#section1" class="text-white no-underline hover:underline">Section 1</a>
+      </li>
+      <li class="inline mr-6">
+        <a href="#section2" class="text-white no-underline hover:underline">Section 2</a>
+      </li>
+      <li class="inline mr-6">
+        <a href="#section3" class="text-white no-underline hover:underline">Section 3</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="p-8 max-w-4xl mx-auto">
+  <section id="section1" class="mb-12">
+    <h2 class="text-3xl font-semibold mb-6">Section 1: Text Elements</h2>
+    <p class="mb-6">
+      This is a paragraph with some
+      <strong class="font-bold text-blue-500">bold</strong> text and some
+      <em class="italic text-purple-500">italic</em> text.
+    </p>
+    <blockquote class="border-l-4 border-blue-300 pl-4 mb-6 italic text-gray-600">
+      This is a blockquote.
+    </blockquote>
+    <pre class="bg-gray-800 text-white p-4 overflow-auto mb-6 rounded-lg">
                 This is preformatted text.
-            </pre
-        >
-        <p class="mb-6">
-          This is a
-          <a
-            href="https://www.example.com"
-            target="_blank"
-            class="text-blue-600 hover:text-blue-800"
-            >link</a
-          >.
-        </p>
-      </section>
+            </pre>
+    <p class="mb-6">
+      This is a
+      <a href="https://www.example.com" target="_blank" class="text-blue-600 hover:text-blue-800">link</a>.
+    </p>
+  </section>
 
-      <section id="section2" class="mb-12">
-        <h2 class="text-3xl font-semibold mb-6">Section 2: Lists</h2>
-        <h3 class="text-2xl font-medium mb-4">Unordered List</h3>
-        <ul class="list-disc list-inside mb-6">
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ul>
+  <section id="section2" class="mb-12">
+    <h2 class="text-3xl font-semibold mb-6">Section 2: Lists</h2>
+    <h3 class="text-2xl font-medium mb-4">Unordered List</h3>
+    <ul class="list-disc list-inside mb-6">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
 
-        <h3 class="text-2xl font-medium mb-4">Ordered List</h3>
-        <ol class="list-decimal list-inside mb-6">
-          <li>First item</li>
-          <li>Second item</li>
-          <li>Third item</li>
-        </ol>
+    <h3 class="text-2xl font-medium mb-4">Ordered List</h3>
+    <ol class="list-decimal list-inside mb-6">
+      <li>First item</li>
+      <li>Second item</li>
+      <li>Third item</li>
+    </ol>
 
-        <h3 class="text-2xl font-medium mb-4">Definition List</h3>
-        <dl class="mb-6">
-          <dt class="font-semibold">Term 1</dt>
-          <dd class="ml-6">Definition 1</dd>
-          <dt class="font-semibold">Term 2</dt>
-          <dd class="ml-6">Definition 2</dd>
-        </dl>
-      </section>
+    <h3 class="text-2xl font-medium mb-4">Definition List</h3>
+    <dl class="mb-6">
+      <dt class="font-semibold">Term 1</dt>
+      <dd class="ml-6">Definition 1</dd>
+      <dt class="font-semibold">Term 2</dt>
+      <dd class="ml-6">Definition 2</dd>
+    </dl>
+  </section>
 
-      <section id="section3" class="mb-12">
-        <h2 class="text-3xl font-semibold mb-6">Section 3: Media and Forms</h2>
-        <h3 class="text-2xl font-medium mb-4">Image</h3>
-        <img
-          src="https://via.placeholder.com/150"
-          alt="Placeholder Image"
-          class="mb-6 rounded-lg shadow-lg"
-        />
+  <section id="section3" class="mb-12">
+    <h2 class="text-3xl font-semibold mb-6">Section 3: Media and Forms</h2>
+    <h3 class="text-2xl font-medium mb-4">Image</h3>
+    <img src="https://placehold.co/150" alt="Placeholder Image" class="mb-6 rounded-lg shadow-lg" />
 
-        <h3 class="text-2xl font-medium mb-4">Form</h3>
-        <form
-          action="/submit"
-          method="post"
-          class="bg-white p-8 border border-gray-200 rounded-lg shadow-md"
-        >
-          <label for="name" class="block mb-2 font-medium">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-          />
+    <h3 class="text-2xl font-medium mb-4">Form</h3>
+    <form action="/submit" method="post" class="bg-white p-8 border border-gray-200 rounded-lg shadow-md">
+      <label for="name" class="block mb-2 font-medium">Name:</label>
+      <input type="text" id="name" name="name"
+        class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none" />
 
-          <label for="email" class="block mb-2 font-medium">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-          />
+      <label for="email" class="block mb-2 font-medium">Email:</label>
+      <input type="email" id="email" name="email"
+        class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none" />
 
-          <label for="password" class="block mb-2 font-medium">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-          />
+      <label for="password" class="block mb-2 font-medium">Password:</label>
+      <input type="password" id="password" name="password"
+        class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none" />
 
-          <label for="date" class="block mb-2 font-medium">Date:</label>
-          <input
-            type="date"
-            id="date"
-            name="date"
-            class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-          />
+      <label for="date" class="block mb-2 font-medium">Date:</label>
+      <input type="date" id="date" name="date"
+        class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none" />
 
-          <label for="gender" class="block mb-2 font-medium">Gender:</label>
-          <select
-            id="gender"
-            name="gender"
-            class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-          >
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
+      <label for="gender" class="block mb-2 font-medium">Gender:</label>
+      <select id="gender" name="gender"
+        class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
 
-          <label for="comments" class="block mb-2 font-medium">Comments:</label>
-          <textarea
-            id="comments"
-            name="comments"
-            rows="4"
-            class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-          ></textarea>
+      <label for="comments" class="block mb-2 font-medium">Comments:</label>
+      <textarea id="comments" name="comments" rows="4"
+        class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
 
-          <label for="subscribe" class="mb-2 font-medium"
-            >Subscribe to newsletter:</label
-          >
-          <input type="checkbox" id="subscribe" name="subscribe" class="mb-4" />
+      <label for="subscribe" class="mb-2 font-medium">Subscribe to newsletter:</label>
+      <input type="checkbox" id="subscribe" name="subscribe" class="mb-4" />
 
-          <input
-            type="submit"
-            value="Submit"
-            class="w-full bg-blue-500 text-white p-3 rounded-lg cursor-pointer hover:bg-blue-600 transition-colors"
-          />
-        </form>
-      </section>
-    </main>
+      <input type="submit" value="Submit"
+        class="w-full bg-blue-500 text-white p-3 rounded-lg cursor-pointer hover:bg-blue-600 transition-colors" />
+    </form>
+  </section>
+</main>
 
-    <footer class="bg-gray-800 text-white text-center p-6">
-      <p>© 2024 Basic HTML Tags Page</p>
-    </footer>
-  </body>
+<footer class="bg-gray-800 text-white text-center p-6">
+  <p>© 2024 Basic HTML Tags Page</p>
+</footer>
+</body>
+
 </html>
 
 ```

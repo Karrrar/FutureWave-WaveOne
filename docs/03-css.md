@@ -68,196 +68,213 @@ selector {
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic HTML Tags with CSS</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-      }
-      header {
-        background: #333;
-        color: #fff;
-        padding: 1rem;
-        text-align: center;
-      }
-      nav ul {
-        list-style: none;
-        padding: 0;
-      }
-      nav ul li {
-        display: inline;
-        margin-right: 10px;
-      }
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-      }
-      main {
-        padding: 20px;
-      }
-      section {
-        margin-bottom: 20px;
-      }
-      h1,
-      h2,
-      h3 {
-        color: #333;
-      }
-      ul,
-      ol,
-      dl {
-        margin: 10px 0;
-      }
-      p {
-        margin: 10px 0;
-      }
-      pre {
-        background: #f4f4f4;
-        padding: 10px;
-        overflow: auto;
-      }
-      blockquote {
-        border-left: 10px solid #ccc;
-        margin: 10px 0;
-        padding-left: 10px;
-        color: #666;
-      }
-      form {
-        background: #f9f9f9;
-        padding: 20px;
-        border: 1px solid #ddd;
-      }
-      form label {
-        display: block;
-        margin-bottom: 5px;
-      }
-      form input,
-      form select,
-      form textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      form input[type="submit"] {
-        width: auto;
-        background: #333;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-      }
-      footer {
-        background: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to the Basic HTML Tags Page</h1>
-      <nav>
-        <ul>
-          <li><a href="#section1">Section 1</a></li>
-          <li><a href="#section2">Section 2</a></li>
-          <li><a href="#section3">Section 3</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <section id="section1">
-        <h2>Section 1: Text Elements</h2>
-        <p>
-          This is a paragraph with some <strong>bold</strong> text and some
-          <em>italic</em> text.
-        </p>
-        <blockquote>This is a blockquote.</blockquote>
-        <pre>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic HTML Tags with CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #333;
+    }
+
+    ul,
+    ol,
+    dl {
+      margin: 10px 0;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      overflow: auto;
+    }
+
+    blockquote {
+      border-left: 10px solid #ccc;
+      margin: 10px 0;
+      padding-left: 10px;
+      color: #666;
+    }
+
+    form {
+      background: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form input[type="submit"] {
+      width: auto;
+      background: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to the Basic HTML Tags Page</h1>
+    <nav>
+      <ul>
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="section1">
+      <h2>Section 1: Text Elements</h2>
+      <p>
+        This is a paragraph with some <strong>bold</strong> text and some
+        <em>italic</em> text.
+      </p>
+      <blockquote>This is a blockquote.</blockquote>
+      <pre>
                 This is preformatted text.
-            </pre
-        >
-        <p>
-          This is a <a href="https://www.example.com" target="_blank">link</a>.
-        </p>
-      </section>
+            </pre>
+      <p>
+        This is a <a href="https://www.example.com" target="_blank">link</a>.
+      </p>
+    </section>
 
-      <section id="section2">
-        <h2>Section 2: Lists</h2>
-        <h3>Unordered List</h3>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ul>
+    <section id="section2">
+      <h2>Section 2: Lists</h2>
+      <h3>Unordered List</h3>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
 
-        <h3>Ordered List</h3>
-        <ol>
-          <li>First item</li>
-          <li>Second item</li>
-          <li>Third item</li>
-        </ol>
+      <h3>Ordered List</h3>
+      <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </ol>
 
-        <h3>Definition List</h3>
-        <dl>
-          <dt>Term 1</dt>
-          <dd>Definition 1</dd>
-          <dt>Term 2</dt>
-          <dd>Definition 2</dd>
-        </dl>
-      </section>
+      <h3>Definition List</h3>
+      <dl>
+        <dt>Term 1</dt>
+        <dd>Definition 1</dd>
+        <dt>Term 2</dt>
+        <dd>Definition 2</dd>
+      </dl>
+    </section>
 
-      <section id="section3">
-        <h2>Section 3: Media and Forms</h2>
-        <h3>Image</h3>
-        <img src="https://via.placeholder.com/150" alt="Placeholder Image" />
+    <section id="section3">
+      <h2>Section 3: Media and Forms</h2>
+      <h3>Image</h3>
+      <img src="https://placehold.co/150" alt="Placeholder Image" />
 
-        <h3>Form</h3>
-        <form action="/submit" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" /><br /><br />
+      <h3>Form</h3>
+      <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" /><br /><br />
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
 
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" /><br /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" /><br /><br />
 
-          <label for="date">Date:</label>
-          <input type="date" id="date" name="date" /><br /><br />
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" /><br /><br />
 
-          <label for="gender">Gender:</label>
-          <select id="gender" name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option></select
-          ><br /><br />
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select><br /><br />
 
-          <label for="comments">Comments:</label><br />
-          <textarea id="comments" name="comments" rows="4" cols="50"></textarea
-          ><br /><br />
+        <label for="comments">Comments:</label><br />
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br /><br />
 
-          <label for="subscribe">Subscribe to newsletter:</label>
-          <input type="checkbox" id="subscribe" name="subscribe" /><br /><br />
+        <label for="subscribe">Subscribe to newsletter:</label>
+        <input type="checkbox" id="subscribe" name="subscribe" /><br /><br />
 
-          <input type="submit" value="Submit" />
-        </form>
-      </section>
-    </main>
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+  </main>
 
-    <footer>
-      <p>© 2024 Basic HTML Tags Page</p>
-    </footer>
-  </body>
+  <footer>
+    <p>© 2024 Basic HTML Tags Page</p>
+  </footer>
+</body>
+
 </html>
 ```
 
