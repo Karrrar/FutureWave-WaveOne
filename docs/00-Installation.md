@@ -40,15 +40,7 @@ You can install `Windows Terminal` from Microsoft store
 
 To install Git on Windows:
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 1. Go to the official Git website: https://git-scm.com/install/windows
-=======
-1. Go to the official Git website: <https://git-scm.com/download/windows>
->>>>>>> Stashed changes
-=======
-1. Go to the official Git website: <https://git-scm.com/download/windows>
->>>>>>> Stashed changes
 2. The download should start automatically. If not, click on the download link.
 3. Run the downloaded installer.
 4. During installation:
@@ -81,39 +73,18 @@ You can install GitHub CLI in two ways:
 
 #### Option 1: Manual Download
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 1. Go to https://cli.github.com/
-=======
-1. Go to <https://cli.github.com/>
->>>>>>> Stashed changes
-=======
-1. Go to <https://cli.github.com/>
->>>>>>> Stashed changes
 2. Click on the download button for Windows
 3. Run the installer
 4. Follow the installation prompts
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-#### Option 2: Using winget
-=======
 #### Option 2: Using winget (Windows)
->>>>>>> Stashed changes
-=======
-#### Option 2: Using winget (Windows)
->>>>>>> Stashed changes
 
-```sh
+```powershell
 winget install --id GitHub.cli
 ```
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-2. Verify the installation:
-=======
-=======
->>>>>>> Stashed changes
 #### option 3: Using Homebrew (macOS)
 
 ```sh
@@ -121,24 +92,13 @@ brew install gh
 ```
 
 ### Verify the installation
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 ```sh
 gh --version
 ```
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 3. Authenticate with GitHub:
-=======
 ### Authenticate with GitHub
->>>>>>> Stashed changes
-=======
-### Authenticate with GitHub
->>>>>>> Stashed changes
 
 ```sh
 gh auth login
@@ -173,7 +133,7 @@ brew install --cask visual-studio-code
 
 ## 3. Installing Node.js and Yarn
 
-### Install NVM (Recommended)
+### Options 1: Install NVM (Recommended)
 
 Do not install Node.js if you installed NVM
 
@@ -194,7 +154,10 @@ brew install nvm
 3. Run `nvm install 23.1.0`
 4. Run `nvm use 23.1.0`
 
-### Install Node.js
+
+### Opstion 2: Install Node.js
+
+Do not install Node.js if you installed  NVM
 
 1. Go to the official Node.js website: [https://nodejs.org](https://nodejs.org).
 2. Download the LTS (Long Term Support) version for your operating system.
@@ -212,13 +175,13 @@ This should display the installed Node.js version.
 
 ### Install Yarn
 
-#### using corepace
+#### Option 1: using corepace (Recommended)
 
 1. Open your terminal or command prompt.
 2. Run `corepack enable`
    - if corepack not installed run `npm install -g corepack` and re-run `corepack enable`
 
-#### using npm
+#### Option 2: using npm
 
 1. Open your terminal or command prompt.
 2. Run the following command to install Yarn globally:
