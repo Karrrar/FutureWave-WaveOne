@@ -21,3 +21,20 @@
 - Introduction to CSS (30min)
 - Work (15min)
 - What Next (10min)
+
+#### Day three (November 7, 2025)
+
+- Tailwind
+  - css basic (30min)
+  - tailwind classes (25min)
+  - basic tailwind (30min)
+  - positioning (30min)
+
+#### Day four (November 8, 2025)
+
+- Git basic (20min)
+- Typescript introduction (60min)
+- Chacoch (30min)
+  - how is Chacoch
+  - how to use it
+- Homework (5min)

@@ -10,13 +10,21 @@ Transform from beginner to full-stack developer with this comprehensive web deve
 
 
 ## Quick Links
-
-- [Introduction](./01-Introduction.md) - Introduction
-- [Installation](./00-Installation.md) - Setup your development environment and tools
 - [Agenda](./00-Agenda.md) - Course schedule and topics
+- [Introduction](./01-Introduction.md) - Introduction
+- [Git Basics](./01.1-git-basics.md) - Command line and Git essentials
+- [Installation](./00-Installation.md) - Setup your development environment and tools
 - [HTML Lessons](./02-html.md) - HTML5 fundamentals and exercises
 - [CSS Lessons](./03-css.md) - CSS techniques and layouts
 - [Tailwind CSS](./04-tailwind.md) - Utility-first styling with Tailwind
+- [TypeScript Introduction](./05.0-typescript.md) - What is TypeScript?
+  - [TypeScript Functions](./05.1-typescript-functions.md) - Functions in TypeScript
+  - [TypeScript Variables & Types](./05.2-typescript-types-varables.md) - Variables and primitive types
+  - [TypeScript For Loop & Arrays](./05.3-typescript-forloop-array.md) - Iteration and arrays
+  - [TypeScript If Statements](./05.4-typescript-if.md) - Conditional logic
+  - [TypeScript Object Types](./05.5-typescript-object-type.md) - Objects and interfaces
+
+
 
 ## What You'll Learn
 
