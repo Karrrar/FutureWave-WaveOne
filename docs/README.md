@@ -24,6 +24,9 @@ Transform from beginner to full-stack developer with this comprehensive web deve
   - [TypeScript If Statements](./05.4-typescript-if.md) - Conditional logic
   - [TypeScript Object Types](./05.5-typescript-object-type.md) - Objects and interfaces
 
+### Chacoch
+- [Chacoch](https://github.com/Karrrar/Chacoch) - Mini game to learn basic programming
+
 
 
 ## What You'll Learn
