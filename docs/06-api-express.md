@@ -17,26 +17,26 @@ An **API (Application Programming Interface)** is a set of rules and protocols t
 flowchart TD
     A["🖥️ Frontend Client<br/>(React, Vue, Mobile App)"] --> B["📡 HTTP Request"]
     B --> C["🌐 Express.js API Server"]
-    
+
     C --> D{"🔍 Route Matching"}
     D --> E["GET /contacts"]
     D --> F["POST /contacts"]
     D --> G["DELETE /contacts/:id"]
     D --> H["❌ 404 Not Found"]
-    
+
     E --> I["📋 Get All Contacts"]
     F --> J["➕ Create Contact"]
     G --> K["🗑️ Delete Contact"]
-    
+
     I --> L["💾 Data Storage<br/>(Array/Database)"]
     J --> L
     K --> L
-    
+
     L --> M["📤 JSON Response"]
     H --> M
-    
+
     M --> N["📱 Client Receives Data"]
-    
+
     style A fill:#e3f2fd
     style C fill:#e8f5e8
     style E fill:#e1f5fe
@@ -48,17 +48,20 @@ flowchart TD
 ```
 
 ### Types of APIs:
+
 - **REST APIs**: Most common, uses HTTP methods (GET, POST, PUT, DELETE)
 - **GraphQL APIs**: Query language for APIs
 - **SOAP APIs**: Older protocol using XML
 
 ### Why APIs are important:
+
 - **Separation of concerns**: Frontend and backend can be developed independently
 - **Reusability**: Multiple applications can use the same API
 - **Scalability**: Easy to scale different parts of your application
 - **Mobile support**: Same API can serve web and mobile apps
 
 ### HTTP Methods explained:
+
 - **GET**: Retrieve data (like reading a book)
 - **POST**: Create new data (like writing a new book)
 - **PUT**: Update existing data (like editing a book)
@@ -71,20 +74,20 @@ sequenceDiagram
     participant C as Client (Browser/App)
     participant API as Express API Server
     participant DB as Database/Storage
-    
+
     Note over C,DB: GET Request Example
     C->>API: GET /contacts
     API->>DB: Query all contacts
     DB->>API: Return contact data
     API->>C: JSON response with contacts
-    
+
     Note over C,DB: POST Request Example
     C->>API: POST /contacts + JSON data
     API->>API: Validate input data
     API->>DB: Save new contact
     DB->>API: Confirm creation
     API->>C: JSON response with new contact
-    
+
     Note over C,DB: DELETE Request Example
     C->>API: DELETE /contacts/1
     API->>DB: Find and remove contact
@@ -97,6 +100,7 @@ sequenceDiagram
 **Express.js** is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
 ### Why use Express.js?
+
 - **Simple**: Easy to learn and use
 - **Fast**: Built on top of Node.js, inheriting its performance
 - **Flexible**: Minimal framework that doesn't impose strict structure
@@ -104,6 +108,7 @@ sequenceDiagram
 - **Middleware support**: Easy to add functionality with plugins
 
 ### Key concepts:
+
 - **Routes**: Define endpoints for your API
 - **Middleware**: Functions that run between request and response
 - **Request/Response**: Handle incoming requests and send responses
@@ -123,7 +128,7 @@ flowchart TD
     H --> J[Send Response]
     I --> J
     J --> K[Client Response]
-    
+
     style B fill:#e1f5fe
     style C fill:#f3e5f5
     style F fill:#e8f5e8
@@ -133,6 +138,7 @@ flowchart TD
 ## Setting Up Express.js
 
 ### 1. Project Setup
+
 ```bash
 # Create new project
 mkdir my-api-project
@@ -141,21 +147,25 @@ cd my-api-project
 # Initialize with Yarn
 yarn init -y
 
+# Configure Yarn
+yarn config set nodeLinker node-modules
+
 # Install Express and TypeScript dependencies
 yarn add express
 yarn add -D typescript @types/node @types/express ts-node-dev
 
-# Configure Yarn
-yarn config set nodeLinker node-modules
 ```
 
 ### 2. Create TypeScript configuration
+
 Generate the initial TypeScript configuration:
+
 ```bash
 yarn tsc --init
 ```
 
 This will create a `tsconfig.json` file with default settings:
+
 ```json
 {
   // Visit https://aka.ms/tsconfig to read more about this file
@@ -198,12 +208,13 @@ This will create a `tsconfig.json` file with default settings:
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   }
 }
 ```
 
 ### 3. Configure tsconfig.json for Express.js
+
 Update the generated `tsconfig.json` with these specific settings for Node.js/Express development:
 
 ```json
@@ -219,13 +230,8 @@ Update the generated `tsconfig.json` with these specific settings for Node.js/Ex
     "target": "esnext",
     // "types": [],
     // For nodejs:
-    "lib": [
-      "esnext"
-    ],
-    "types": [
-      "node",
-      "express"
-    ],
+    "lib": ["esnext"],
+    "types": ["node", "express"],
     // and npm install -D @types/node @types/express
     // Other Outputs
     "sourceMap": true,
@@ -251,21 +257,17 @@ Update the generated `tsconfig.json` with these specific settings for Node.js/Ex
     "moduleDetection": "force",
     "skipLibCheck": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
 ```
 
 #### Key changes made:
+
 - **Uncommented `rootDir` and `outDir`**: Define source and build directories
 - **Changed `module` to `esnext`**: Better compatibility with modern JavaScript
 - **Added `lib: ["esnext"]`**: Include latest JavaScript features
-- **Updated `types`**: Include Node.js and Express type definitions ` "types": ["node","express"] `
+- **Updated `types`**: Include Node.js and Express type definitions `"types": ["node","express"]`
 - **Added `esModuleInterop`**: Better CommonJS/ES module compatibility
 - **Added `include` and `exclude` arrays**: Specify which files to compile
 
@@ -277,8 +279,8 @@ Update the generated `tsconfig.json` with these specific settings for Node.js/Ex
 | `esnext`   | Generic modern JS | Browser-like      | Frontend bundlers       |
 | `commonjs` | Legacy Node.js    | CommonJS only     | Older Node.js projects  |
 
-
 ### 4. Update package.json scripts
+
 ```json
 {
   "name": "wave-one-api",
@@ -302,6 +304,7 @@ Update the generated `tsconfig.json` with these specific settings for Node.js/Ex
 ```
 
 ### 5. Create project structure
+
 ```bash
 mkdir src
 
@@ -318,13 +321,13 @@ flowchart TD
     A --> D["📁 src/"]
     A --> E["📁 dist/ (generated)"]
     A --> F["📁 node_modules/"]
-    
+
     D --> G["📄 index.ts (main server file)"]
-    
+
     E --> K["📄 index.js (compiled)"]
     E --> L["📄 index.js.map"]
     E --> M["📄 index.d.ts"]
-        
+
     style A fill:#e3f2fd
     style D fill:#e8f5e8
     style E fill:#fff3e0
@@ -335,8 +338,9 @@ flowchart TD
 Let's create a simple Express server:
 
 ### src/index.ts
+
 ```typescript
-import express from "express";
+import express from 'express';
 
 const app = express();
 const port = 3000;
@@ -345,28 +349,29 @@ const port = 3000;
 app.use(express.json());
 
 // Routes
-app.get("/", (req, res) => {
-  res.send("Hello API! 🚀");
+app.get('/', (req, res) => {
+  res.send('Hello API! 🚀');
 });
 
 // Another sample route
-app.get("/api/hello", (req, res) => {
-  res.json({ message: "Hello from Express 🌐 + TypeScript! 📃" });
+app.get('/api/hello', (req, res) => {
+  res.json({ message: 'Hello from Express 🌐 + TypeScript! 📃' });
 });
 
 // Start server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
-
 ```
 
 ### Run your server:
+
 ```bash
 yarn dev
 ```
 
 **About ts-node-dev:**
+
 - `--respawn`: Automatically restarts when files change
 - `--transpile-only`: Skip type checking for faster compilation
 - Faster startup and reload times
@@ -384,21 +389,21 @@ Let's build a contact management API with three endpoints. We'll store contacts 
 ```mermaid
 flowchart LR
     A["🌐 Client"] --> B["📡 Express Server"]
-    
+
     B --> C["GET /contacts<br/>📖 Read All"]
     B --> D["POST /contacts<br/>➕ Create New"]
     B --> E["DELETE /contacts/:id<br/>🗑️ Remove"]
-    
+
     C --> F["📋 Return contact list"]
     D --> G["✅ Return new contact"]
     E --> H["🗑️ Return deleted contact"]
-    
+
     F --> I["📊 JSON Response"]
     G --> I
     H --> I
-    
+
     I --> A
-    
+
     style C fill:#e8f5e8
     style D fill:#e3f2fd
     style E fill:#ffebee
@@ -430,18 +435,18 @@ interface Contact {
 let contacts: Contact[] = [
   {
     id: 1,
-    name: "John Doe",
-    email: "john@example.com",
-    phone: "+1-555-0123",
-    createdAt: "2024-01-15T10:30:00Z"
+    name: 'John Doe',
+    email: 'john@example.com',
+    phone: '+1-555-0123',
+    createdAt: '2024-01-15T10:30:00Z',
   },
   {
     id: 2,
-    name: "Jane Smith",
-    email: "jane@example.com",
-    phone: "+1-555-0456",
-    createdAt: "2024-01-16T14:20:00Z"
-  }
+    name: 'Jane Smith',
+    email: 'jane@example.com',
+    phone: '+1-555-0456',
+    createdAt: '2024-01-16T14:20:00Z',
+  },
 ];
 
 // Counter for generating new IDs
@@ -454,13 +459,13 @@ app.get('/contacts', (req: Request, res: Response) => {
       success: true,
       data: contacts,
       count: contacts.length,
-      message: 'Contacts retrieved successfully'
+      message: 'Contacts retrieved successfully',
     });
   } catch (error) {
     res.status(500).json({
       success: false,
       message: 'Failed to retrieve contacts',
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -474,16 +479,16 @@ app.post('/contacts', (req: Request, res: Response) => {
     if (!name || !email || !phone) {
       return res.status(400).json({
         success: false,
-        message: 'Name, email, and phone are required'
+        message: 'Name, email, and phone are required',
       });
     }
 
     // Check if email already exists
-    const existingContact = contacts.find(contact => contact.email === email);
+    const existingContact = contacts.find((contact) => contact.email === email);
     if (existingContact) {
       return res.status(400).json({
         success: false,
-        message: 'Contact with this email already exists'
+        message: 'Contact with this email already exists',
       });
     }
 
@@ -493,7 +498,7 @@ app.post('/contacts', (req: Request, res: Response) => {
       name,
       email,
       phone,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     };
 
     // Add to contacts array
@@ -502,13 +507,13 @@ app.post('/contacts', (req: Request, res: Response) => {
     res.status(201).json({
       success: true,
       data: newContact,
-      message: 'Contact created successfully'
+      message: 'Contact created successfully',
     });
   } catch (error) {
     res.status(500).json({
       success: false,
       message: 'Failed to create contact',
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -519,12 +524,14 @@ app.delete('/contacts/:id', (req: Request, res: Response) => {
     const contactId = parseInt(req.params.id);
 
     // Find contact index
-    const contactIndex = contacts.findIndex(contact => contact.id === contactId);
+    const contactIndex = contacts.findIndex(
+      (contact) => contact.id === contactId
+    );
 
     if (contactIndex === -1) {
       return res.status(404).json({
         success: false,
-        message: 'Contact not found'
+        message: 'Contact not found',
       });
     }
 
@@ -534,13 +541,13 @@ app.delete('/contacts/:id', (req: Request, res: Response) => {
     res.json({
       success: true,
       data: deletedContact,
-      message: 'Contact deleted successfully'
+      message: 'Contact deleted successfully',
     });
   } catch (error) {
     res.status(500).json({
       success: false,
       message: 'Failed to delete contact',
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -552,9 +559,9 @@ app.get('/', (req: Request, res: Response) => {
     endpoints: {
       'GET /contacts': 'Get all contacts',
       'POST /contacts': 'Create a new contact',
-      'DELETE /contacts/:id': 'Delete a contact by ID'
+      'DELETE /contacts/:id': 'Delete a contact by ID',
     },
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   });
 });
 
@@ -567,8 +574,8 @@ app.use('*', (req: Request, res: Response) => {
       'GET /',
       'GET /contacts',
       'POST /contacts',
-      'DELETE /contacts/:id'
-    ]
+      'DELETE /contacts/:id',
+    ],
   });
 });
 
@@ -587,11 +594,13 @@ app.listen(port, () => {
 ### Using curl commands:
 
 #### 1. Get all contacts:
+
 ```bash
 curl http://localhost:3000/contacts
 ```
 
 #### 2. Create a new contact:
+
 ```bash
 curl -X POST http://localhost:3000/contacts \
   -H "Content-Type: application/json" \
@@ -603,6 +612,7 @@ curl -X POST http://localhost:3000/contacts \
 ```
 
 #### 3. Delete a contact:
+
 ```bash
 curl -X DELETE http://localhost:3000/contacts/1
 ```
@@ -626,15 +636,19 @@ curl -X DELETE http://localhost:3000/contacts/1
 Our API follows a consistent response format:
 
 ### Success Response:
+
 ```json
 {
   "success": true,
-  "data": { /* actual data */ },
+  "data": {
+    /* actual data */
+  },
   "message": "Operation completed successfully"
 }
 ```
 
 ### Error Response:
+
 ```json
 {
   "success": false,
@@ -646,6 +660,7 @@ Our API follows a consistent response format:
 ## Understanding the Endpoints
 
 ### 1. GET /contacts (Read Operation)
+
 - **Purpose**: Retrieve all contacts
 - **Method**: GET
 - **Response**: Array of contact objects
@@ -657,12 +672,13 @@ app.get('/contacts', (req: Request, res: Response) => {
   res.json({
     success: true,
     data: contacts,
-    count: contacts.length
+    count: contacts.length,
   });
 });
 ```
 
 ### 2. POST /contacts (Create Operation)
+
 - **Purpose**: Create a new contact
 - **Method**: POST
 - **Body**: JSON with name, email, phone
@@ -672,22 +688,23 @@ app.get('/contacts', (req: Request, res: Response) => {
 ```typescript
 app.post('/contacts', (req: Request, res: Response) => {
   const { name, email, phone } = req.body;
-  
+
   // Validation and creation logic
   const newContact = {
     id: nextId++,
     name,
     email,
     phone,
-    createdAt: new Date().toISOString()
+    createdAt: new Date().toISOString(),
   };
-  
+
   contacts.push(newContact);
   res.status(201).json({ success: true, data: newContact });
 });
 ```
 
 ### 3. DELETE /contacts/:id (Delete Operation)
+
 - **Purpose**: Delete a specific contact
 - **Method**: DELETE
 - **URL Parameter**: Contact ID
@@ -697,14 +714,16 @@ app.post('/contacts', (req: Request, res: Response) => {
 ```typescript
 app.delete('/contacts/:id', (req: Request, res: Response) => {
   const contactId = parseInt(req.params.id);
-  
+
   // Find and remove contact
-  const contactIndex = contacts.findIndex(contact => contact.id === contactId);
-  
+  const contactIndex = contacts.findIndex(
+    (contact) => contact.id === contactId
+  );
+
   if (contactIndex === -1) {
     return res.status(404).json({ message: 'Contact not found' });
   }
-  
+
   const deletedContact = contacts.splice(contactIndex, 1)[0];
   res.json({ success: true, data: deletedContact });
 });
@@ -713,33 +732,39 @@ app.delete('/contacts/:id', (req: Request, res: Response) => {
 ## Best Practices
 
 ### 1. Error Handling
+
 Always wrap your route handlers in try-catch blocks:
+
 ```typescript
 app.get('/contacts', async (req: Request, res: Response) => {
   try {
     // Your logic here
   } catch (error) {
-    res.status(500).json({ 
-      success: false, 
-      message: 'Internal server error' 
+    res.status(500).json({
+      success: false,
+      message: 'Internal server error',
     });
   }
 });
 ```
 
 ### 2. Input Validation
+
 Validate incoming data:
+
 ```typescript
 if (!name || !email || !phone) {
   return res.status(400).json({
     success: false,
-    message: 'Required fields are missing'
+    message: 'Required fields are missing',
   });
 }
 ```
 
 ### 3. Consistent Response Format
+
 Use the same response structure across all endpoints:
+
 ```typescript
 // Success
 { success: true, data: {}, message: '' }
@@ -749,6 +774,7 @@ Use the same response structure across all endpoints:
 ```
 
 ### 4. Proper HTTP Status Codes
+
 - `200`: Success
 - `201`: Created
 - `400`: Bad Request (client error)
@@ -760,18 +786,18 @@ Use the same response structure across all endpoints:
 ```mermaid
 flowchart TD
     A["📨 API Request"] --> B{"Request Valid?"}
-    
+
     B -->|Yes| C{"Resource Exists?"}
     B -->|No| D["❌ 400 Bad Request"]
-    
+
     C -->|Yes| E{"Operation Type"}
     C -->|No| F["🔍 404 Not Found"]
-    
+
     E -->|GET/PUT/DELETE| G["✅ 200 OK"]
     E -->|POST| H["🆕 201 Created"]
-    
+
     I["💥 Server Error"] --> J["🚨 500 Internal Error"]
-    
+
     style D fill:#ffcdd2
     style F fill:#fff3e0
     style G fill:#c8e6c9
@@ -792,10 +818,10 @@ flowchart TD
     C --> D["🔐 Authentication Middleware"]
     D --> E["📍 Route Handler"]
     E --> F["📤 Send Response"]
-    
+
     G["⚠️ Error Occurs"] --> H["🚨 Error Handler Middleware"]
     H --> F
-    
+
     style A fill:#e3f2fd
     style B fill:#e8f5e8
     style C fill:#f3e5f5
@@ -828,17 +854,20 @@ app.use((error, req, res, next) => {
 For production apps, use environment variables:
 
 ### Create .env file:
+
 ```bash
 PORT=3000
 NODE_ENV=development
 ```
 
 ### Install dotenv:
+
 ```bash
 yarn add dotenv
 ```
 
 ### Use in your app:
+
 ```typescript
 import 'dotenv/config';
 
@@ -850,6 +879,7 @@ const port = process.env.PORT || 3000;
 After mastering this basic API, you can explore:
 
 ### Database Integration:
+
 ```bash
 # SQLite (simple)
 yarn add sqlite3
@@ -865,6 +895,7 @@ yarn add -D @types/mongodb
 ```
 
 ### Additional Features:
+
 - **Authentication**: JWT tokens, sessions
 - **Validation**: Joi, Yup, or Zod for input validation
 - **Documentation**: Swagger/OpenAPI for API docs
@@ -874,6 +905,7 @@ yarn add -D @types/mongodb
 - **Logging**: Winston or similar for proper logging
 
 ### Express Middleware Libraries:
+
 ```bash
 yarn add cors helmet morgan compression
 ```
@@ -891,12 +923,12 @@ flowchart TD
     E --> F["📝 File Change Detected"]
     F --> G["🔄 Auto Restart"]
     G --> D
-    
+
     H["🏗️ Production Build"] --> I["📦 yarn build"]
     I --> J["🔨 TypeScript Compiler"]
     J --> K["📁 dist/index.js"]
     K --> L["🚀 Deploy to Server"]
-    
+
     style A fill:#e3f2fd
     style C fill:#e8f5e8
     style E fill:#e1f5fe
@@ -909,6 +941,7 @@ flowchart TD
 ## Summary
 
 You've learned:
+
 - **What APIs are**: Interfaces for application communication
 - **Express.js basics**: Setting up a web server
 - **Three CRUD endpoints**: GET (read), POST (create), DELETE (remove)
