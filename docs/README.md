@@ -17,12 +17,14 @@ Transform from beginner to full-stack developer with this comprehensive web deve
 - [HTML Lessons](./02-html.md) - HTML5 fundamentals and exercises
 - [CSS Lessons](./03-css.md) - CSS techniques and layouts
 - [Tailwind CSS](./04-tailwind.md) - Utility-first styling with Tailwind
+- [Node.js & yarn & typescript configuration](./05-nodejs-yarn.md) - Node.js project setup with yarn
 - [TypeScript Introduction](./05.0-typescript.md) - What is TypeScript?
   - [TypeScript Functions](./05.1-typescript-functions.md) - Functions in TypeScript
   - [TypeScript Variables & Types](./05.2-typescript-types-varables.md) - Variables and primitive types
   - [TypeScript For Loop & Arrays](./05.3-typescript-forloop-array.md) - Iteration and arrays
   - [TypeScript If Statements](./05.4-typescript-if.md) - Conditional logic
   - [TypeScript Object Types](./05.5-typescript-object-type.md) - Objects and interfaces
+- [API Development with Express.js](./06-api-express.md) - Build RESTful APIs using Express.js
 
 ### Chacoch
 - [Chacoch](https://github.com/Karrrar/Chacoch) - Mini game to learn basic programming

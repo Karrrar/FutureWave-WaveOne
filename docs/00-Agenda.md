@@ -38,3 +38,10 @@
   - how is Chacoch
   - how to use it
 - Homework (5min)
+
+#### Day five (November 21, 2025)
+
+- What is Api (20min)
+- Yarn and Nodejs project setup (40min)
+- Expressjs introduction (50min)
+- Homework (5min)
