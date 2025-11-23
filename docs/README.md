@@ -12,6 +12,10 @@ Transform from beginner to full-stack developer with this comprehensive web deve
 ## Quick Links
 - [Agenda](./00-Agenda.md) - Course schedule and topics
 - [Introduction](./01-Introduction.md) - Introduction
+- [Basic Terminal Commands](./01.0-terminal.md) - Terminal basics for Windows, macOS, and Linux
+  - [Windows Terminal Guide](./01.0-terminal-windows.md) - PowerShell and Git Bash commands
+  - [macOS Terminal Guide](./01.0-terminal-mac.md) - Native macOS commands
+  - [Linux Terminal Guide](./01.0-terminal-linux.md) - Linux command line essentials
 - [Git Basics](./01.1-git-basics.md) - Command line and Git essentials
 - [Installation](./00-Installation.md) - Setup your development environment and tools
 - [HTML Lessons](./02-html.md) - HTML5 fundamentals and exercises
