@@ -29,6 +29,7 @@ Transform from beginner to full-stack developer with this comprehensive web deve
   - [TypeScript If Statements](./05.4-typescript-if.md) - Conditional logic
   - [TypeScript Object Types](./05.5-typescript-object-type.md) - Objects and interfaces
 - [API Development with Express.js](./06-api-express.md) - Build RESTful APIs using Express.js
+- [Next.js Getting Started](./07-nextjs-getting-started.md) - Create a Next.js project with TypeScript
 
 ### Chacoch
 - [Chacoch](https://github.com/Karrrar/Chacoch) - Mini game to learn basic programming
