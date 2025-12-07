@@ -151,8 +151,14 @@ winget install --id CoreyButler.NVMforWindows
 brew install nvm
 ```
 
-3. Run `nvm install 23.1.0`
-4. Run `nvm use 23.1.0`
+3. Run 
+```bash
+nvm install 23.1.0
+```
+4. Run 
+```bash
+nvm use 23.1.0
+```
 
 
 ### Opstion 2: Install Node.js
@@ -168,7 +174,7 @@ Do not install Node.js if you installed  NVM
 Open your terminal or command prompt and type:
 
 ```console
-    node -v
+node -v
 ```
 
 This should display the installed Node.js version.
@@ -178,8 +184,15 @@ This should display the installed Node.js version.
 #### Option 1: using corepace (Recommended)
 
 1. Open your terminal or command prompt.
-2. Run `corepack enable`
-   - if corepack not installed run `npm install -g corepack` and re-run `corepack enable`
+2. Run
+```bash 
+corepack enable
+```
+   - if corepack not installed run 
+```bash
+npm install -g corepack
+```
+   and re-run `corepack enable`
 
 #### Option 2: using npm
 
@@ -187,7 +200,7 @@ This should display the installed Node.js version.
 2. Run the following command to install Yarn globally:
 
 ```console
-   npm install -g yarn
+npm install -g yarn
 ```
 
 ### Verify Yarn Installation
@@ -195,7 +208,7 @@ This should display the installed Node.js version.
 Type the following command:
 
 ```console
-    yarn -v
+yarn -v
 ```
 
 This should display the installed Yarn version.
